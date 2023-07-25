@@ -40,9 +40,9 @@ for i in range(num_balas):
         # Calcular la posición de la bola en el tiempo actual
         posicion_x, posicion_y, velocidad = calcular_trayectoria(angulo_lanzamiento, velocidad_lanzamiento, tiempo_actual)
 
-        x_vals.append(posicion_x)
-        y_vals.append(posicion_y)
-        z_vals.append(tiempo_actual)
+        x_vals.append(posicion_y)
+        y_vals.append(tiempo_actual)
+        z_vals.append(posicion_x)
 
         tiempo_actual += intervalo_tiempo
         distancia_recorrida = tiempo_actual * velocidad  # La distancia en metros
@@ -60,9 +60,9 @@ for i in range(num_balas):
     # Dibujar la trayectoria de la bala
     ax.plot(x_vals, y_vals, z_vals)
 
-ax.set_xlabel('Distancia (m)')
-ax.set_ylabel('Altura (m)')
-ax.set_zlabel('Tiempo (s)')
+ax.set_xlabel('Tiempo (s)')
+ax.set_ylabel('Distancia (m)')
+ax.set_zlabel('Altura (m)')
 ax.set_title('Trayectorias de las balas lanzadas por el cañón')
 
 plt.show()
