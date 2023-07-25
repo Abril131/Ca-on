@@ -45,7 +45,7 @@ for i in range(num_balas):
         z_vals.append(tiempo_actual)
 
         tiempo_actual += intervalo_tiempo
-        distancia_recorrida = posicion_x  # La distancia en metros
+        distancia_recorrida = tiempo_actual * velocidad  # La distancia en metros
         if velocidad > velocidad_maxima:
             velocidad_maxima = velocidad
 
